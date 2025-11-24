@@ -1,11 +1,11 @@
---- breakdown of percentage of annual salary spent on each player (not including loanees)
+-- percentage of annual salary spent on each player (not including loanees)
 
 WITH team_total AS (
 	SELECT
 		team,
 		SUM(annual) AS team_annual_spend
 	FROM player_salaries
-	WHERE team = 'Brentford'
+	WHERE team = 'Fulham'
 	GROUP BY team
 	)
 
@@ -21,11 +21,8 @@ INNER JOIN team_total t ON p.team = t.team
 WHERE p.player NOT IN (
     SELECT name
     FROM transfers
-    WHERE (New_Team = 'Brentford FC' OR Former_Team = 'Brentford FC')
+    WHERE (New_Team = 'Fulham FC' OR Former_Team = 'Fulham FC')
       AND Fee LIKE '%loan%'
       AND Season = '2024/2025'
 	)
 ORDER BY p.team, percent DESC
-
-/*
-    'Brentford'

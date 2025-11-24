@@ -1,3 +1,5 @@
+-- points per million
+
 SELECT
 	s.team,
 	s.points,
@@ -6,6 +8,3 @@ SELECT
 FROM standings s
 INNER JOIN team_salary t ON s.team = t.team
 ORDER BY points_per_million DESC
-
-
--- respond from a business perspective - eg. a team comes to you and asks where should we be spending, what, etc

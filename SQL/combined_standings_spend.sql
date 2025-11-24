@@ -1,3 +1,5 @@
+-- combined standings and spends by team
+
 SELECT
 	s.rank,
 	s.team,

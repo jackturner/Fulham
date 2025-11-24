@@ -1,4 +1,5 @@
- --ROI for each team from forwards
+-- forwards ROI by team
+ 
 WITH fw_spend AS (
 	SELECT
 	team,
@@ -25,7 +26,8 @@ INNER JOIN fw_spend fs ON s.team = fs.team
 INNER JOIN fw_ga fga ON s.team = fga.team
 ORDER BY ga_per_million DESC
 
---ROI for each forward
+-- forwards ROI by player
+
 SELECT
 	p.team,
 	p.name,

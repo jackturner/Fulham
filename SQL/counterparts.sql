@@ -1,3 +1,5 @@
+-- fulham difference vs counterparts
+
 WITH counterparts AS (
 	SELECT
 		s.team,

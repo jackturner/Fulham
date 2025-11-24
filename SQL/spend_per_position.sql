@@ -1,4 +1,4 @@
---how does each team spend their money (percentages on positions)
+-- percentage spent on each position by team
 
 WITH defenders AS (
 	SELECT
